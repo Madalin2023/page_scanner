@@ -40,7 +40,7 @@ function showCategory(categoryId) {
     let html = '<div class="data-grid">';
 
     if (categoryId === 'cta') {
-        html = '<h1>Domain Info (CTA e Link)</h1><p class="subtitle">Analisi delle Call to Action trovate sul sito target</p><div class="data-grid">';
+        html = '<h1>CTA and links</h1><p class="subtitle">Analysis of the calls to action found on the target website</p><div class="data-grid">';
         reportData.cta.forEach(item => {
             let noteHtml = item.Note ? `<span class="badge-error">⚠️ ${item.Note}</span>` : '';
             let errorStyle = item.Label === "TESTO MANCANTE" ? 'color: #c81e1e; font-weight: bold;' : '';
@@ -48,23 +48,23 @@ function showCategory(categoryId) {
             html += `
             <div class="data-item">
                 <div class="data-row">
-                    <span class="data-label">Testo (Label)</span>
+                    <span class="data-label">CTA label</span>
                     <span class="data-value" style="${errorStyle}">${item.Label}</span>
                 </div>
                 <div class="data-row" style="margin-top: 12px;">
-                    <span class="data-label">Destinazione Link</span>
+                    <span class="data-label">CTA link</span>
                     <span class="data-value"><a href="${item.Link}" target="_blank">${item.Link}</a></span>
                 </div>
                 ${noteHtml}
             </div>`;
         });
     } else if (categoryId === 'immagini') {
-        html = '<h1>Pages Info (Immagini e Alt)</h1><p class="subtitle">Verifica attributi ALT delle immagini e percorsi sorgente</p><div class="data-grid">';
+        html = '<h1>Images</h1><p class="subtitle">Alternative tags and source links</p><div class="data-grid">';
         reportData.immagini.forEach(item => {
             html += `
             <div class="data-item">
                 <div class="data-row">
-                    <span class="data-label">Sorgente Immagine</span>
+                    <span class="data-label">Source</span>
                     <span class="data-value" style="color: #c81e1e;">${item["Link Immagine"]}</span>
                 </div>
                 <div class="data-row" style="margin-top: 12px;">
