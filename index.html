@@ -1,0 +1,76 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard page_scanner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav class="sidebar-primary">
+        <div class="logo">E</div>
+        <ul class="nav-icons">
+            <li class="active">📊</li>
+            <li>📁</li>
+            <li>🔗</li>
+            <li>⚙️</li>
+        </ul>
+        <div class="user-profile">M</div>
+    </nav>
+
+    <aside class="sidebar-secondary">
+        <h2>My Sites Details</h2>
+        <a href="#" class="back-link">← Back to domain List</a>
+        
+        <div class="completion-bar">
+            <div class="completion-header">
+                <span>Completion</span>
+                <span>40%</span>
+            </div>
+            <div class="bar-bg"><div class="bar-fill"></div></div>
+        </div>
+
+        <ul class="category-list">
+            <li id="nav-cta" class="active" onclick="showCategory('cta')">
+                <span class="icon">🌐</span> Domain Info (CTA & Link)
+            </li>
+            <li id="nav-immagini" onclick="showCategory('immagini')">
+                <span class="icon">🖼️</span> Pages (Immagini & Alt)
+            </li>
+            <li id="nav-seo" onclick="showCategory('seo')">
+                <span class="icon">🔍</span> Google Data (Altro)
+            </li>
+        </ul>
+    </aside>
+
+    <main class="content-area">
+        <header class="content-header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="header-actions">
+                <button class="copilot-btn">✨ Copilot <span class="beta">Beta</span></button>
+                <span style="cursor:pointer; font-size: 18px;">🔔</span>
+                <span style="cursor:pointer; font-size: 18px;">⚙️</span>
+            </div>
+        </header>
+
+        <div class="content-card">
+            <div id="dynamic-content">
+                <!-- I dati in JS verranno iniettati qui dentro -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
